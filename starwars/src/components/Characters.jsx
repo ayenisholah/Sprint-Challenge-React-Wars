@@ -9,11 +9,12 @@ function Characters(props) {
                 <h2>Name: {props.name}</h2>
             </div>
             <div className='character-details'>
-                <p>Gender: {props.gender}</p>
-                <p>Height: {props.height}</p>
-                <p>Mass: {props.mass}</p>
-                <p>Eye Color: {props.eye_color}</p>
-                <p>Hair Color: {props.hair_color}</p>
+                <p><strong>Birth Year: </strong>{props.birthYear}</p>
+                <p><strong>Gender: </strong>{props.gender}</p>
+                <p><strong>Height: </strong>{props.height}</p>
+                <p><strong>Mass: </strong>{props.mass}</p>
+                <p><strong>Eye Color: </strong>{props.eyeColor}</p>
+                <p><strong>Hair Color: </strong>{props.hairColor}</p>
             </div>
         </div>
 
