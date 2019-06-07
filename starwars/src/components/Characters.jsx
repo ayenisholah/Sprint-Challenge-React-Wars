@@ -2,6 +2,7 @@ import React from 'react';
 import './StarWars.css';
 
 function Characters(props) {
+
     return (
         <div className='characters'>
             <div className='character-name'>

@@ -4,8 +4,8 @@ import Characters from './components/Characters';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       starwarsChars: []
     };
@@ -25,6 +25,7 @@ class App extends Component {
       })
       .then(data => {
         this.setState({ starwarsChars: data.results });
+        console.log(this.state.starwarsChars)
       })
       .catch(err => {
         throw new Error(err);
