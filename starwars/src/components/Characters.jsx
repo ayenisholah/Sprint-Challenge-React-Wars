@@ -2,10 +2,6 @@ import React from 'react';
 
 import './StarWars.css';
 
-// class Characters extends React.Component {
-//     constructor(){
-//         super();
-//     }
 
 function Characters (props) {
     return  (
