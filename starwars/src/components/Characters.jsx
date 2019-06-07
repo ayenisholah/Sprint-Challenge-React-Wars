@@ -1,29 +1,31 @@
 import React from 'react';
+
 import './StarWars.css';
 
-class Characters extends React.Component {
-    constructor(){
-        super();
-    }
+// class Characters extends React.Component {
+//     constructor(){
+//         super();
+//     }
 
-    render() {
-        return  (
-            <div className='characters'>
-                <div className='character-name'>
-                    <h2>Name</h2>
-                </div>
-                <div className='character-details'>
-                    <p>Gender: </p>
-                    <p>Height: </p>
-                    <p>Mass: </p>
-                    <p>Eye Color: </p>
-                    <p>Hair Color: </p>
-                    <p>Skin Color: </p>
-                </div>
-
+function Characters (props) {
+    return  (
+        <div className='characters'>
+            <div className='character-name'>
+                <h2>Name: {props.name}</h2>
             </div>
-        );
-    };
+            <div className='character-details'>
+                <p>Gender: {props.gender}</p>
+                <p>Height: {props.height}</p>
+                <p>Mass: {props.mass}</p>
+                <p>Eye Color: {props.eye_color}</p>
+                <p>Hair Color: {props.hair_color}</p>
+                <p>Skin Color: {props.skin_color}</p>
+            </div>
+
+        </div>
+    );
 };
 
-export default Characters
+
+
+export default Characters;

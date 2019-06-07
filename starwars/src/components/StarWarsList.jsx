@@ -1,10 +1,14 @@
 import React from 'react';
 import Characters from './Characters';
+
 import './StarWars.css';
 
 class StarWarsList extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state={
+            starwarsChars: this.props.starwarsChars
+        }
     }
 
     render() {
@@ -12,7 +16,8 @@ class StarWarsList extends React.Component {
             <div className='character-list'>
                 <div className='char'>
                     <h1>Star Wars Characters</h1>
-                        {list.map(element => {
+                        {this.state.starwarsChars.map(element => {
+                            console.log(element);
                             return <Characters
                                     key={element.url}
                                     name={element.name}
