@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import StarWarsList from './components/StarWarsList';
+import Characters from './components/Characters';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       starwarsChars: []
     };
@@ -23,6 +25,7 @@ class App extends Component {
       })
       .then(data => {
         this.setState({ starwarsChars: data.results });
+        console.log(this.state.starwarsChars)
       })
       .catch(err => {
         throw new Error(err);
@@ -33,6 +36,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <StarWarsList
+          starwarsChars={this.state.starwarsChars}
+        />
+        <Characters
+
+        />
       </div>
     );
   }
