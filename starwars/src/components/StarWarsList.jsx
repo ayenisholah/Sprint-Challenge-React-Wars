@@ -3,39 +3,26 @@ import Characters from './Characters';
 
 import './StarWars.css';
 
-class StarWarsList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            starwarsChars: this.props.starwarsChars
-        }
-    }
 
-    render() {
+function StarWarsList (props) {
+    console.log(props)
         return (
             <div className='character-list'>
                 <div className='char'>
-                    <h1>Star Wars Characters</h1>
-                        {this.state.starwarsChars.map(element => {
-                            console.log(element);
-                            return <Characters
-                                    key={element.url}
-                                    name={element.name}
-                                    gender={element.gender}
-                                    height={element.height}
-                                    mass={element.mass}
-                                    eyeColor={element.eye_color}
-                                    hairColor={element.hair_color}
-                                    skinColor={element.skin_color}
-                                    url={element.url}
-                
-                                />
-                        })}
-                </div>
-
+                <h1>Star Wars Characters</h1>
+                    {props.starwarsChars.map(element => 
+                        <Characters
+                            key={element.url}
+                            name={element.name}
+                            gender={element.gender}
+                            height={element.height}
+                            mass={element.mass}
+                            url={element.url}
+                        />
+                        )}
+                 </div>
             </div>
-        )
-    };
+    )
 }
 
 export default StarWarsList;
