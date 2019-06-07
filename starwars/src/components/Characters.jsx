@@ -19,7 +19,6 @@ class Characters extends React.Component {
                     <p>Mass: {this.props.mass}</p>
                     <p>Eye Color: {this.props.eye_color}</p>
                     <p>Hair Color: {this.props.hair_color}</p>
-                    {/* <p>Skin Color: {this.stateprops.skin_color}</p> */}
                 </div>
     
             </div>
